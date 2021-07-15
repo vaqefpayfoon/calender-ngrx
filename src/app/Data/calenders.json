@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "reminde me doctor appointment",
+      "city": "George Town",
+      "reminderDate": "2021-04-11",
+      "time": "03:55",
+      "marker": "blue",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "my friends birthday",
+      "city": "George Town",
+      "reminderDate": "2021-05-18",
+      "time": "01:55",
+      "marker": "#e116e7",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "title": "complete my task",
+      "city": "Shah Alam",
+      "reminderDate": "2021-01-20",
+      "time": "01:55",
+      "marker": "#b6db22",
+      "userId": "1"
+    }
+  ]
+}

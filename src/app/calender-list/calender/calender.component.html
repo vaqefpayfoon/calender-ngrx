@@ -1,0 +1,71 @@
+<div class="container pt-4">
+    <form [formGroup]='reminderForm' (ngSubmit)="submit()">
+        <div class="col-md-12 row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="priority">Title</label>
+                            <input type="text" formControlName='title' name="title" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="priority">City</label>
+                            <ng2-completer name="city" [datasource]="cities" [minSearchLength]="0"
+                                formControlName='city' [inputClass]="'form-control form-control-inline'">
+                            </ng2-completer>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="reminderDate">Reminder Date</label>
+                            <input type="date" formControlName="reminderDate" name="reminderDate" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="time">Reminder Date</label>
+                            <input type="time" formControlName="time" name="time" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="marker">Marker</label>
+                            <input type="color" formControlName="marker" name="marker" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pt-4">
+                <div class="form-group">
+                    <input [disabled]="!reminderForm.valid" type="submit" value="Remind Me" class="btn btn-success">
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../../assets/weather.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                  <h5 class="card-title">
+                                      cloud: {{this.weather?.clouds?.all}}
+                                  </h5>
+                                  <p class="card-text">humidity: {{this.weather?.main?.humidity}}</p>
+                                  <p class="card-text">pressure: {{this.weather?.main?.pressure}}</p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

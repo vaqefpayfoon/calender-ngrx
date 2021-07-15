@@ -1,0 +1,38 @@
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">title</th>
+            <th scope="col">city</th>
+            <th scope="col">date</th>
+            <th scope="col">time</th>
+            <th scope="col">marker</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tr *ngFor="let calender of calenders">
+        <td>
+            {{calender.title}}
+        </td>
+        <td>
+            {{calender.city}}
+        </td>
+        <td>
+            {{calender.reminderDate}}
+        </td>
+        <td>
+            {{calender.time}}
+        </td>
+        <td>
+           <div style="width: 60px; height: 30px;"
+            [ngStyle]="{ 'background-color' : calender.marker }"></div> 
+        </td>
+        <td>
+            <a [routerLink]="['/calender', calender.id]"  class="btn btn-success btn-sm">
+            edit</a>
+        </td>
+        <td>
+            <button (click)="deleteItem(calender.id)" class="btn btn-danger btn-sm">delete</button>
+        </td>
+    </tr>
+</table>
